@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Intelligence - Real-Time Analysis</title>
+    <title>Portfolio Intelligence Real Time Analysis</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         * {
@@ -602,7 +602,7 @@
     <div class="container">
         <div class="header">
             <h1>Portfolio Intelligence</h1>
-            <p>Real-time portfolio analysis powered by Yahoo Finance</p>
+            <p>Real time portfolio analysis powered by Yahoo Finance</p>
         </div>
 
         <!-- Stock Selection -->
@@ -851,9 +851,9 @@
                 backendConnected = false;
                 updateBackendStatus(false, null);
                 if (error.name === 'AbortError') {
-                    showStatus('Backend connection timeout. Please check Railway deployment.', 'error');
+                    showStatus('Backend connection timeout. Please check the deployment.', 'error');
                 } else {
-                    showStatus('Backend not connected. Checking Railway deployment...', 'error');
+                    showStatus('Backend not connected. Checking the deployment...', 'error');
                 }
             }
         }
@@ -864,9 +864,9 @@
             
             if (connected && healthData) {
                 indicator.classList.add('connected');
-                if (healthData.server === 'Railway Portfolio Intelligence') {
-                    text.textContent = 'Railway + Yahoo Finance';
-                    showStatus('Connected to Railway backend with Yahoo Finance!', 'success');
+                if (healthData.server === 'Portfolio Intelligence') {
+                    text.textContent = 'Render + Yahoo Finance';
+                    showStatus('Connected to backend with Yahoo Finance!', 'success');
                 } else {
                     text.textContent = 'Backend Connected';
                 }
@@ -986,7 +986,7 @@
                     showStatus('Error validating stock. Please try again.', 'error');
                 }
             } else {
-                showStatus('Backend not connected. Please start Railway backend.', 'error');
+                showStatus('Backend not connected. Please start backend.', 'error');
             }
         }
         
@@ -1072,14 +1072,14 @@
             }
             
             if (!backendConnected) {
-                showStatus('Backend not connected. Please check Railway deployment.', 'error');
+                showStatus('Backend not connected. Please check deployment.', 'error');
                 return;
             }
             
             const analyzeBtn = document.getElementById('analyze-btn');
             analyzeBtn.disabled = true;
             
-            showLoading('Analyzing portfolio with Railway + Yahoo Finance...');
+            showLoading('Analyzing portfolio with Render + Yahoo Finance...');
             showProgress();
             
             try {
@@ -1119,8 +1119,7 @@
             const progressFill = document.getElementById('progress-fill');
             
             progressBar.style.display = 'block';
-            
-            // Fast progress for Railway deployment
+        
             let progress = 0;
             const interval = setInterval(() => {
                 progress += Math.random() * 25;
@@ -1863,7 +1862,7 @@
                     <div class="loading-spinner"></div>
                     <p>${message}</p>
                     <p style="font-size: 14px; color: var(--gray); margin-top: 16px;">
-                        Powered by Railway + Yahoo Finance
+                        Powered by Render + Yahoo Finance
                     </p>
                 </div>
             `;
