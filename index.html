@@ -798,8 +798,8 @@
     <script>
         
         const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-            ? 'http://127.0.0.1:5000/api' 
-            : 'https://web-production-c86b.up.railway.app/api';
+            ? 'http://127.0.0.1:5001/api'  // Local development
+            : 'https://portfolio-intelligence-backend.onrender.com/api';  // Your Render URL
         
         // State
         let selectedStocks = [];
