@@ -30,4 +30,5 @@ Setup Instructions:
 
 ```bash
 git clone https://github.com/Iza-3435/portfolio-intelligence.git
-cd portfolio-optimization-engine
+cd portfolio-intelligence
+
