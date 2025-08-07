@@ -29,5 +29,5 @@ Setup Instructions:
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/portfolio-optimization-engine.git
+git clone https://github.com/Iza-3435/portfolio-intelligence.git
 cd portfolio-optimization-engine
